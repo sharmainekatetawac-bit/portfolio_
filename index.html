@@ -1,0 +1,1249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Sharmaine Kate Tawac, Administrative and Business Support Specialist and Registered Civil Engineer.">
+  <title>Sharmaine Kate Tawac | Professional Portfolio</title>
+
+  <style>
+    :root {
+      --ink: #202c2a;
+      --muted: #64716d;
+      --paper: #fbfaf7;
+      --white: #ffffff;
+      --sage: #dfe8df;
+      --sage-deep: #526d61;
+      --gold: #b68a54;
+      --line: #e4e6df;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(251, 250, 247, 0.96);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      min-height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--sage-deep);
+    }
+
+    .header-socials {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .header-socials a {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--sage-deep);
+      background: var(--white);
+      transition: transform .22s ease, background .22s ease, color .22s ease, border-color .22s ease;
+    }
+
+    .header-socials a:hover {
+      transform: translateY(-3px);
+      background: var(--sage-deep);
+      border-color: var(--sage-deep);
+      color: var(--white);
+    }
+
+    .header-socials svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .hero {
+      padding: 100px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow,
+    .section-label {
+      color: var(--sage-deep);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1, h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      letter-spacing: -1px;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      margin: 20px 0;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 12px 0 18px;
+    }
+
+    .hero .tagline {
+      font-family: Georgia, serif;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p,
+    .section-intro {
+      color: var(--muted);
+    }
+
+    .hero p {
+      max-width: 650px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border: 1px solid var(--ink);
+      border-radius: 3px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: white;
+    }
+
+    .button.secondary {
+      background: transparent;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.85;
+    }
+
+    .profile-card {
+      min-height: 350px;
+      padding: 35px;
+      background: var(--sage);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid #d1ddd1;
+    }
+
+    .profile-photo {
+      display: block;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 18%;
+      border: 3px solid var(--white);
+      box-shadow: 0 4px 15px rgba(32, 44, 42, 0.12);
+    }
+
+    .profile-card small {
+      display: block;
+      margin-top: 20px;
+      color: var(--sage-deep);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .profile-caption {
+      max-width: 240px;
+      font-family: Georgia, serif;
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 0.4fr 1fr;
+      gap: 35px;
+      margin-bottom: 35px;
+    }
+
+    .section-label {
+      padding-top: 10px;
+    }
+
+    .about-grid,
+    .skills-grid,
+    .interest-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .interest-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .interest-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(32,44,42,.08);
+    }
+
+    .interest-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 14px;
+      border-radius: 16px;
+      background: #f4eee3;
+      font-size: 1.55rem;
+    }
+
+    .interest-card h3 { margin-bottom: 7px; font-size: 1.05rem; }
+    .interest-card p { color: var(--muted); font-size: .92rem; }
+
+    .equipment-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .about-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .panel,
+    .skill-card,
+    .job,
+    .equipment-item {
+      padding: 25px;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .panel h3,
+    .skill-card h3,
+    .job h3 {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    .panel p,
+    .skill-card p {
+      color: var(--muted);
+    }
+
+    .soft {
+      background: #f1f0e9;
+    }
+
+    .pills,
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .pill {
+      padding: 7px 11px;
+      background: #edf1eb;
+      color: #40584d;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skill-number {
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 1.7rem;
+    }
+
+    .experience {
+      background: #f1f0e9;
+    }
+
+    .jobs {
+      display: grid;
+      gap: 20px;
+    }
+
+    .job {
+      display: grid;
+      grid-template-columns: 0.65fr 1.35fr;
+      gap: 30px;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .job-meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .job-meta strong {
+      display: block;
+      color: var(--ink);
+      font-size: 1rem;
+    }
+
+    .job ul {
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .job li {
+      margin: 7px 0;
+    }
+
+    .tool {
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      background: white;
+      font-size: 0.9rem;
+    }
+
+    .interest-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .interest-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .interest-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(32,44,42,.08);
+    }
+
+    .interest-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 14px;
+      border-radius: 16px;
+      background: #f4eee3;
+      font-size: 1.55rem;
+    }
+
+    .interest-card h3 { margin-bottom: 7px; font-size: 1.05rem; }
+    .interest-card p { color: var(--muted); font-size: .92rem; }
+
+    .equipment-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .equipment-item span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .contact {
+      background: var(--ink);
+      color: white;
+    }
+
+    .contact .section-label {
+      color: #c8d8cb;
+    }
+
+    .contact .section-intro {
+      color: #c6cfca;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: end;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-links a {
+      color: white;
+      text-underline-offset: 4px;
+    }
+
+    footer {
+      padding: 22px 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        padding: 16px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .header-socials {
+        margin-top: 2px;
+      }
+
+      section,
+      .hero {
+        padding: 60px 0;
+      }
+
+      .hero-grid,
+      .section-heading,
+      .about-grid,
+      .skills-grid,
+      .job,
+      .equipment-grid,
+      .interest-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .profile-card {
+        min-height: 270px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+      .social-links { justify-content: flex-start; }
+      .contact-links { min-width: 0; }
+      .contact-grid { align-items: start; }
+      .profile-photo-wrap, .profile-photo, .profile-fallback { width: 135px; height: 135px; }
+
+    }
+
+
+    /* Smooth, subtle motion and visual accents */
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(22px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes floatSoft {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+    @keyframes softGlow {
+      0%, 100% { box-shadow: 0 12px 30px rgba(32,44,42,.06); }
+      50% { box-shadow: 0 18px 38px rgba(82,109,97,.16); }
+    }
+    .hero-copy { animation: riseIn .8s ease-out both; }
+    .profile-card { animation: riseIn .85s .12s ease-out both, softGlow 7s 1.2s ease-in-out infinite; }
+    .eyebrow::before {
+      content: ""; display: inline-block; width: 26px; height: 2px;
+      background: var(--gold); margin: 0 10px 4px 0;
+    }
+    .skill-card, .panel, .job, .equipment-item {
+      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+    }
+    .skill-card:hover, .panel:hover, .job:hover, .equipment-item:hover {
+      transform: translateY(-5px); border-color: #c7d5c8;
+      box-shadow: 0 14px 30px rgba(32,44,42,.08);
+    }
+    .skill-card { position: relative; overflow: hidden; }
+    .skill-card::after {
+      content: ""; position: absolute; width: 110px; height: 110px; right: -45px; bottom: -50px;
+      border-radius: 50%; background: var(--sage); opacity: .55; transition: transform .35s ease;
+    }
+    .skill-card:hover::after { transform: scale(1.45); }
+    .skill-icon {
+      width: 46px; height: 46px; display: grid; place-items: center;
+      border-radius: 14px; background: #edf2eb; color: var(--sage-deep); margin-bottom: 14px;
+    }
+    .skill-icon svg { width: 24px; height: 24px; stroke: currentColor; }
+    .skill-number { position: relative; z-index: 1; }
+    .skill-card h3, .skill-card p { position: relative; z-index: 1; }
+    .profile-photo-wrap { width: 150px; height: 150px; margin: 0 auto; position: relative; }
+    .profile-photo { display: block; width: 150px; height: 150px; margin: 0 auto; border-radius: 50%; object-fit: cover; object-position: center 18%; border: 3px solid white; box-shadow: 0 4px 15px rgba(32,44,42,.12); }
+    .profile-fallback {
+      display: none; width: 150px; height: 150px; border-radius: 50%; align-items: center; justify-content: center;
+      background: #f7f5ed; color: var(--sage-deep); border: 3px solid white; box-shadow: 0 4px 15px rgba(32,44,42,.12);
+      font-family: Georgia, serif; font-size: 2.6rem; letter-spacing: 2px;
+    }
+    .social-links { display: flex; gap: 12px; justify-content: flex-end; align-items: center; }
+    .social-icon {
+      display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.35);
+      border-radius: 50%; color: white; text-decoration: none; transition: background .25s ease, transform .25s ease, border-color .25s ease;
+    }
+    .social-icon svg { width: 20px; height: 20px; fill: currentColor; }
+    .social-icon:hover { background: var(--sage-deep); border-color: var(--sage-deep); transform: translateY(-4px); }
+    .contact-grid { grid-template-columns: 1fr auto; }
+    .contact-links { min-width: 245px; }
+    .button { transition: transform .25s ease, background .25s ease, color .25s ease, box-shadow .25s ease; }
+    .button.primary:hover { background: var(--sage-deep); box-shadow: 0 8px 18px rgba(32,44,42,.15); }
+    .nav-links a { transition: color .2s ease; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+    .reveal.revealed { opacity: 1; transform: translateY(0); }
+    .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .case-card { background: var(--white); border: 1px solid var(--line); padding: 26px; transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease; }
+    .case-card:hover { transform: translateY(-6px); border-color: #c7d5c8; box-shadow: 0 16px 32px rgba(32,44,42,.09); }
+    .case-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: #edf2eb; color: var(--sage-deep); margin-bottom: 18px; }
+    .case-icon svg { width: 25px; height: 25px; }
+    .case-kicker { font-size: .72rem; letter-spacing: 1.8px; color: var(--sage-deep); font-weight: 800; margin-bottom: 8px; }
+    .case-card h3 { font-size: 1.12rem; line-height: 1.35; margin-bottom: 10px; }
+    .case-card > p:not(.case-kicker) { color: var(--muted); font-size: .94rem; }
+    .case-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+    .case-tags span { background: #edf1eb; color: #40584d; padding: 5px 9px; font-size: .76rem; border-radius: 2px; }
+    .scroll-progress { position: fixed; z-index: 200; top: 0; left: 0; height: 3px; width: 0; background: var(--gold); }
+    .back-top { position: fixed; right: 22px; bottom: 22px; z-index: 90; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: white; text-decoration: none; box-shadow: 0 5px 16px rgba(0,0,0,.14); opacity: 0; pointer-events: none; transform: translateY(8px); transition: .25s ease; }
+    .back-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .nav-links a.active { color: var(--sage-deep); font-weight: 800; }
+    .theme-toggle { border: 1px solid var(--line); border-radius: 50%; width: 38px; height: 38px; background: var(--white); color: var(--ink); cursor: pointer; font-size: 1rem; }
+    body.dark { --ink: #edf1ec; --muted: #b7c2bb; --paper: #17211e; --white: #202d28; --sage: #2a3931; --sage-deep: #b6cdbb; --line: #394840; }
+    body.dark header { background: rgba(23,33,30,.96); }
+    body.dark .soft, body.dark .experience { background: #1d2924; }
+    body.dark .skill-icon, body.dark .case-icon, body.dark .pill, body.dark .case-tags span { background: #314239; color: #dce9de; }
+    body.dark .job { background: rgba(32,45,40,.9); }
+    body.dark .contact { background: #101815; }
+    body.dark .button.primary { background: #dce9de; color: #17211e; }
+    @media (max-width: 760px) { .case-grid { grid-template-columns: 1fr; } .theme-toggle { width: 34px; height: 34px; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+
+
+
+    /* DESIGN REFRESH: modern editorial layout with a bold, creative accent */
+    :root {
+      --ink: #17243b;
+      --muted: #637087;
+      --paper: #f7f8fc;
+      --white: #ffffff;
+      --sage: #e8eaff;
+      --sage-deep: #6258d9;
+      --gold: #ff8b6a;
+      --line: #e4e7f1;
+      --accent-cyan: #9ce8e1;
+      --shadow-soft: 0 18px 48px rgba(28, 39, 78, .08);
+    }
+    body { background: var(--paper); letter-spacing: .005em; }
+    header { background: rgba(247,248,252,.88); backdrop-filter: blur(18px); border-bottom-color: rgba(228,231,241,.8); }
+    nav { min-height: 78px; }
+    .brand { letter-spacing: .04em; }
+    .nav-links { gap: 8px; align-items: center; }
+    .nav-links a { padding: 8px 11px; border-radius: 999px; }
+    .nav-links a:hover, .nav-links a.active { color: var(--sage-deep); background: #ecebff; }
+    .header-socials a, .theme-toggle { box-shadow: 0 4px 12px rgba(23,36,59,.05); }
+    section { padding: 94px 0; }
+    .hero {
+      position: relative; overflow: hidden; padding: 105px 0 110px;
+      background: radial-gradient(ellipse at 85% 20%, rgba(156,232,225,.48), transparent 31%),
+                  radial-gradient(ellipse at 15% 85%, rgba(255,139,106,.14), transparent 32%),
+                  linear-gradient(135deg, #f7f8fc 0%, #f0f1ff 52%, #f8fbfc 100%);
+    }
+    .hero::before {
+      content: ""; position: absolute; width: 420px; height: 420px; right: -135px; top: -180px;
+      border: 1px solid rgba(98,88,217,.18); border-radius: 50%; pointer-events: none;
+      box-shadow: 0 0 0 35px rgba(98,88,217,.035), 0 0 0 75px rgba(98,88,217,.025);
+    }
+    .hero-grid { position: relative; z-index: 1; gap: clamp(35px, 6vw, 80px); }
+    .eyebrow, .section-label { color: var(--sage-deep); letter-spacing: 2.2px; }
+    .eyebrow { display: inline-flex; align-items: center; border: 1px solid rgba(98,88,217,.18); background: rgba(255,255,255,.66); padding: 9px 14px; border-radius: 999px; font-size: .7rem; }
+    .eyebrow::before { width: 7px; height: 7px; border-radius: 50%; margin: 0 9px 0 0; background: var(--gold); }
+    h1, h2 { letter-spacing: -.045em; }
+    h1 { max-width: 760px; font-size: clamp(3rem, 6.7vw, 5.65rem); line-height: 1.02; margin: 25px 0; }
+    h1::first-line { color: var(--ink); }
+    .hero .tagline { font-family: "Segoe UI", Arial, sans-serif; font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 650; letter-spacing: -.02em; color: #3d4a67; }
+    .hero p { max-width: 680px; }
+    .buttons { gap: 11px; }
+    .button { border-radius: 999px; padding: 13px 19px; border-color: transparent; font-weight: 750; }
+    .button.primary { color: white; background: linear-gradient(135deg, #6258d9, #8177f1); box-shadow: 0 9px 22px rgba(98,88,217,.24); }
+    .button.secondary { background: rgba(255,255,255,.72); border-color: #dfe2f1; }
+    .button.primary:hover { background: linear-gradient(135deg, #5046c8, #7167e6); box-shadow: 0 12px 26px rgba(98,88,217,.3); }
+    .button.secondary:hover { color: var(--sage-deep); border-color: #b9b5f6; background: white; }
+    .profile-card { min-height: 400px; border: 1px solid rgba(255,255,255,.9); border-radius: 28px; padding: 34px; background: linear-gradient(150deg, rgba(255,255,255,.94), rgba(232,234,255,.94)); box-shadow: 0 24px 65px rgba(39,49,105,.13); position: relative; overflow: hidden; }
+    .profile-card::after { content: "✳"; position: absolute; right: 25px; top: 15px; color: var(--gold); font-size: 2.4rem; opacity: .9; }
+    .profile-photo { width: 165px; height: 165px; border: 6px solid white; box-shadow: 0 10px 30px rgba(35,46,89,.16); }
+    .profile-photo-wrap { width: 165px; height: 165px; }
+    .profile-fallback { width: 165px; height: 165px; background: #f5f4ff; color: var(--sage-deep); }
+    .profile-card small { color: var(--sage-deep); font-size: .68rem; font-weight: 800; }
+    .profile-caption { max-width: 290px; font-family: "Segoe UI", Arial, sans-serif; font-size: 1.45rem; line-height: 1.4; font-weight: 750; letter-spacing: -.035em; }
+    .section-heading { align-items: start; gap: 40px; }
+    h2 { font-size: clamp(2.15rem, 4vw, 3.2rem); }
+    .section-label { font-size: .72rem; }
+    .panel, .skill-card, .job, .equipment-item, .case-card, .interest-card { border-radius: 20px; border-color: var(--line); box-shadow: 0 5px 18px rgba(28,39,78,.025); }
+    .panel, .skill-card, .equipment-item { padding: 29px; }
+    .soft, .experience { background: #eff0fb; }
+    .pill { border-radius: 999px; background: #ecebff; color: #5148bf; padding: 8px 13px; }
+    .skill-icon, .case-icon { border-radius: 16px; background: linear-gradient(145deg, #efeeff, #e2faf7); color: #6258d9; }
+    .skill-number { color: var(--gold); }
+    .job { border-radius: 22px; padding: 30px; }
+    .job-meta strong { color: var(--sage-deep); }
+    .tool { border-radius: 999px; padding: 10px 15px; border-color: #e1e4f1; box-shadow: 0 3px 10px rgba(28,39,78,.025); }
+    .case-card { padding: 29px; }
+    .case-kicker { color: var(--sage-deep); }
+    .case-tags span { border-radius: 999px; background: #ecebff; color: #5148bf; padding: 6px 10px; }
+    .interest-card { padding: 28px; background: linear-gradient(145deg, white, #fafaff); }
+    .interest-icon { border-radius: 17px; background: linear-gradient(135deg, #ecebff, #ddf8f4); box-shadow: inset 0 0 0 1px rgba(98,88,217,.07); }
+    .interest-card:nth-child(2) .interest-icon { background: linear-gradient(135deg, #fff0e9, #f0eaff); }
+    .interest-card:nth-child(3) .interest-icon { background: linear-gradient(135deg, #e2faf7, #ecebff); }
+    .contact { background: radial-gradient(ellipse at 90% 15%, rgba(98,88,217,.32), transparent 35%), #17243b; }
+    .contact .section-label { color: #bfc2ff; }
+    .contact .button.primary { background: var(--accent-cyan); color: #17243b; }
+    .contact .button.primary:hover { background: #c5f7f1; }
+    footer { color: var(--muted); }
+    .back-top { background: #6258d9; box-shadow: 0 8px 20px rgba(98,88,217,.3); }
+    .scroll-progress { background: linear-gradient(90deg, #6258d9, #9ce8e1, #ff8b6a); }
+    .reveal { transform: translateY(24px); }
+    .skill-card:hover, .panel:hover, .job:hover, .equipment-item:hover, .case-card:hover, .interest-card:hover { border-color: #c7c4fb; box-shadow: 0 18px 38px rgba(40,47,102,.1); }
+    body.dark { --ink: #f1f3ff; --muted: #b9c2d7; --paper: #121a2b; --white: #1b263b; --sage: #252d49; --sage-deep: #b8b2ff; --line: #303a55; --gold: #ffad92; }
+    body.dark header { background: rgba(18,26,43,.9); }
+    body.dark .hero { background: radial-gradient(ellipse at 85% 20%, rgba(79,124,133,.22), transparent 31%), linear-gradient(135deg, #151e32, #20223c 55%, #15252c); }
+    body.dark .hero .tagline { color: #d6dcf2; }
+    body.dark .hero::before { border-color: rgba(184,178,255,.16); }
+    body.dark .eyebrow, body.dark .button.secondary { background: rgba(27,38,59,.85); }
+    body.dark .profile-card { background: linear-gradient(145deg, #26314c, #2c2c50); border-color: #3b4562; }
+    body.dark .profile-caption, body.dark .profile-card small { color: #f1f3ff; }
+    body.dark .soft, body.dark .experience { background: #172137; }
+    body.dark .interest-card { background: linear-gradient(145deg, #1b263b, #202b42); }
+    body.dark .tool { background: #1b263b; }
+    body.dark .button.primary { background: linear-gradient(135deg, #7167e6, #8980f5); color: white; }
+    @media (max-width: 760px) {
+      section, .hero { padding: 66px 0; }
+      .hero { padding-top: 72px; }
+      .hero-grid { gap: 32px; }
+      h1 { font-size: clamp(2.75rem, 12vw, 4rem); }
+      .profile-card { min-height: 330px; border-radius: 23px; }
+      .section-heading { gap: 10px; }
+      .panel, .skill-card, .equipment-item, .case-card, .interest-card, .job { padding: 23px; }
+      .nav-links a { padding: 6px 8px; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <nav class="container">
+      <a class="brand" href="#home">SHARMAINE KATE TAWAC</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#tools">Tools</a>
+        <a href="#work">Work</a>
+        <a href="#interests">Interests</a>
+        <a href="#setup">Remote Setup</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="header-socials" aria-label="Social media profiles">
+        <a href="https://www.linkedin.com/in/sharmaine-kate-tawac-0570a02a5/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM3.56 9h3.56v11.45H3.56V9Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/shrmnkt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/></svg>
+        </a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            Administrative • Executive • Business Support
+          </div>
+
+          <h1>Organized support.<br>Reliable coordination.</h1>
+
+          <p class="tagline">
+            Helping people, projects, and day-to-day operations run smoothly.
+          </p>
+
+          <p>
+            I'm Sharmaine Kate Tawac, a Registered Civil Engineer and Administrative and Business Support Specialist with over two years of experience supporting the Principal and Founder of a U.S.-based architectural firm. My work has included executive assistance, client communication, CRM administration, document preparation, proposals, invoicing, and day-to-day business operations.
+          </p>
+
+          <div class="buttons">
+            <a class="button primary" href="#experience">
+              Explore My Experience
+            </a>
+
+            <a class="button secondary" href="#contact">
+              Get in Touch
+            </a>
+
+            <!-- Make sure the PDF filename below matches your uploaded file -->
+            <a class="button secondary"
+               href="Sharmaine%20Kate%20Tawac%20-%20Portfolio.pdf"
+               target="_blank" rel="noopener">
+              View PDF Portfolio ↗
+            </a>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <div>
+            <div class="profile-photo-wrap">
+              <img src="./profile.jpg" alt="Sharmaine Kate Tawac" class="profile-photo"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="profile-fallback" aria-label="Initials ST">ST</div>
+            </div>
+            <small>Professional Portfolio</small>
+          </div>
+
+          <div class="profile-caption">
+            Thoughtful administration. Clear communication. Dependable execution.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">01 / About Me</div>
+
+          <div>
+            <h2>Support that brings structure to busy workdays.</h2>
+
+            <p class="section-intro">
+              I take a proactive, detail-oriented approach to administrative support. I focus on keeping schedules organized, records accurate, follow-ups on track, and communication clear. Working closely with leadership has taught me to anticipate priorities, handle sensitive information with discretion, and raise issues early when something needs attention.
+            </p>
+            <p class="section-intro" style="margin-top: 14px;">
+              My civil engineering background and exposure to architectural and construction projects also help me understand technical documentation and project-based workflows. I'm adaptable and eager to learn new tools and processes that help teams work more efficiently.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <article class="panel">
+            <h3>How I Work</h3>
+            <p>
+              I value clear communication, accurate records, discretion, and
+              dependable follow-through. I work to keep priorities visible,
+              information organized, and outstanding tasks moving forward.
+            </p>
+          </article>
+
+          <article class="panel soft">
+            <h3>What I Bring to a Team</h3>
+
+            <div class="pills">
+              <span class="pill">Executive Support</span>
+              <span class="pill">Business Operations</span>
+              <span class="pill">Client Coordination</span>
+              <span class="pill">Project Support</span>
+              <span class="pill">Document Control</span>
+              <span class="pill">Research</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="soft" id="expertise">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">02 / Expertise</div>
+
+          <div>
+            <h2>Reliable support across essential business functions.</h2>
+            <p class="section-intro">
+              A practical mix of executive assistance, administrative systems,
+              client communication, and project-related coordination.
+            </p>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-number">01</div>
+            <div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M8 14h3M8 17h6"/></svg></div>
+            <h3>Executive Support</h3>
+            <p>
+              Calendar coordination, email and phone communication,
+              meeting arrangements, and timely follow-ups.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">02</div>
+            <div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h4M15 18l2 2 4-5"/></svg></div>
+            <h3>Business Operations</h3>
+            <p>
+              Document preparation, proposals, invoices, payment records,
+              and organized business documentation.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">03</div>
+            <div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a7.5 7.5 0 0 1-7.5 7.5H7l-4 2v-5.5A7.5 7.5 0 1 1 21 11.5Z"/><path d="M8 11h8M8 14h5"/></svg></div>
+            <h3>Client Coordination</h3>
+            <p>
+              Professional communication with clients, vendors, and project
+              stakeholders, with attention to service and follow-through.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">04</div>
+            <div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a6 6 0 0 1 12 0v1M16 5h5M18.5 2.5v5M17 14h4M17 18h4"/></svg></div>
+            <h3>CRM & Records</h3>
+            <p>
+              Maintaining client and project information, data entry,
+              record organization, and accessible documentation.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">05</div>
+            <div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M8 10h5M10.5 7.5v5"/></svg></div>
+            <h3>Project Research</h3>
+            <p>
+              Researching property information, permit status, zoning
+              requirements, violations, and lot restrictions.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">06</div>
+            <div class="skill-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M8 9h1M15 9h1"/></svg></div>
+            <h3>Project Support</h3>
+            <p>
+              Supporting project documentation and coordination in an
+              architectural environment, with exposure to site visits.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="experience" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">03 / Experience</div>
+
+          <div>
+            <h2>Experience in Practice.</h2>
+            <p class="section-intro">
+              Administrative, client-service, and project support experience
+              in remote work environments.
+            </p>
+          </div>
+        </div>
+
+        <div class="jobs">
+          <article class="job">
+            <div class="job-meta">
+              <strong>Administrative Assistant</strong>
+              BLDG Projects<br>
+              Architectural Firm · Chicago, Illinois, USA<br>
+              Remote · Dec 2023 – Aug 2026
+            </div>
+
+            <div>
+              <h3>Executive and Operational Support</h3>
+
+              <ul>
+                <li>
+                  Supported the Principal and Founder with executive,
+                  administrative, communication, and operational tasks.
+                </li>
+                <li>
+                  Managed schedules and communications to help keep daily
+                  priorities organized.
+                </li>
+                <li>
+                  Prepared business documents, presentations, reports,
+                  proposals, and invoices.
+                </li>
+                <li>
+                  Used Pipedrive and Microsoft Dynamics 365 for CRM
+                  and business record management.
+                </li>
+                <li>
+                  Assisted with site visits, site setup, interviews,
+                  onboarding, and training.
+                </li>
+                <li>
+                  Handled confidential business development information
+                  with discretion.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="job-meta">
+              <strong>Customer Service Agent</strong>
+              Patricia's Petals<br>
+              Florist · Apr 2022 – May 2023<br>
+              Remote
+            </div>
+
+            <div>
+              <h3>Customer and Order Support</h3>
+
+              <ul>
+                <li>
+                  Processed more than 25 customer orders daily while
+                  maintaining 99% accuracy.
+                </li>
+                <li>
+                  Handled inbound customer calls and supported
+                  order-related concerns.
+                </li>
+                <li>
+                  Coordinated with third-party flower shops and vendors.
+                </li>
+                <li>
+                  Maintained customer and order information in the CRM.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section id="work">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">04 / Selected Work</div>
+          <div>
+            <h2>Practical support. Better-organized workflows.</h2>
+            <p class="section-intro">Examples of the types of administrative and systems work I've contributed to. Details are generalized to protect confidential business information.</p>
+          </div>
+        </div>
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 8h8M8 12h5M8 16h8"/></svg></div>
+            <p class="case-kicker">CRM & RECORDS</p><h3>Organizing client and project information</h3>
+            <p>Maintained records in Pipedrive and Microsoft Dynamics 365, helping keep client and project information structured and easier to access.</p>
+            <div class="case-tags"><span>CRM administration</span><span>Data organization</span></div>
+          </article>
+          <article class="case-card">
+            <div class="case-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11l5 5v11H4z"/><path d="M14 4v6h6M8 14h8M8 17h6"/></svg></div>
+            <p class="case-kicker">DOCUMENT MANAGEMENT</p><h3>Supporting a move to cloud-based files</h3>
+            <p>Helped organize digital folders in Egnyte as part of a server-to-cloud transition, with a focus on making project information more accessible.</p>
+            <div class="case-tags"><span>Egnyte</span><span>File organization</span></div>
+          </article>
+          <article class="case-card">
+            <div class="case-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6M7 16h4"/></svg></div>
+            <p class="case-kicker">BUSINESS OPERATIONS</p><h3>Preparing proposals and invoices</h3>
+            <p>Prepared business proposals and invoices, including QuickBooks billing tasks, while helping maintain clear and organized documentation.</p>
+            <div class="case-tags"><span>QuickBooks</span><span>Documentation</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section id="tools">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">05 / Tools & Systems</div>
+
+          <div>
+            <h2>Tools I've Worked With.</h2>
+            <p class="section-intro">
+              Software and systems used for communication, documentation,
+              accounting support, design, and client information management.
+            </p>
+          </div>
+        </div>
+
+        <div class="tools">
+          <span class="tool">Microsoft Office Suite</span>
+          <span class="tool">Google Workspace</span>
+          <span class="tool">Pipedrive</span>
+          <span class="tool">Microsoft Dynamics 365</span>
+          <span class="tool">QuickBooks</span>
+          <span class="tool">Egnyte</span>
+          <span class="tool">RingCentral</span>
+          <span class="tool">Canva</span>
+          <span class="tool">AutoCAD</span>
+          <span class="tool">AppFolio</span>
+          <span class="tool">Adobe Acrobat</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERSONAL INTERESTS -->
+    <section id="interests">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">06 / A Little About Me</div>
+          <div>
+            <h2>Creative Things I Enjoy.</h2>
+            <p class="section-intro">Outside of work, I enjoy creative hobbies that let me notice details, explore ideas, and express myself.</p>
+          </div>
+        </div>
+        <div class="interest-grid">
+          <article class="interest-card">
+            <div class="interest-icon" aria-hidden="true">📷</div>
+            <h3>Photography</h3>
+            <p>Capturing little details, moments, and perspectives through a camera.</p>
+          </article>
+          <article class="interest-card">
+            <div class="interest-icon" aria-hidden="true">🎨</div>
+            <h3>Drawing</h3>
+            <p>Enjoying illustration, sketching, and exploring ideas visually.</p>
+          </article>
+          <article class="interest-card">
+            <div class="interest-icon" aria-hidden="true">🎵</div>
+            <h3>Music</h3>
+            <p>Listening to music as a way to unwind and recharge.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REMOTE WORK SETUP -->
+    <section class="soft" id="setup">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">07 / Remote Setup</div>
+
+          <div>
+            <h2>Prepared for Remote Collaboration.</h2>
+            <p class="section-intro">
+              A dedicated setup designed to support reliable remote work
+              and everyday business communication.
+            </p>
+          </div>
+        </div>
+
+        <div class="equipment-grid">
+          <div class="equipment-item">
+            <strong>Personal Computer</strong>
+            <span>
+              12th Gen Intel Core i5-12500 · 8 GB RAM ·
+              Intel UHD Graphics 770
+            </span>
+          </div>
+
+          <div class="equipment-item">
+            <strong>Internet Connection</strong>
+            <span>300+ Mbps Globe Fiber</span>
+          </div>
+
+          <div class="equipment-item">
+            <strong>Backup Device</strong>
+            <span>Tablet with wireless keyboard and mouse</span>
+          </div>
+
+          <div class="equipment-item">
+            <strong>Backup Internet</strong>
+            <span>5G mobile hotspot via smartphone</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-label">08 / Contact</div>
+
+          <h2>Thank You for Visiting.</h2>
+
+          <p class="section-intro">
+            I appreciate your interest and welcome the opportunity to connect
+            and discuss how I can support your team.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:sharmainekatetawac@gmail.com">
+            sharmainekatetawac@gmail.com
+          </a>
+
+          <a href="tel:+639090700249">
+            +63 909 070 0249
+          </a>
+
+        </div>
+        <div class="social-links" aria-label="Social media profiles">
+          <a class="social-icon" href="https://www.linkedin.com/in/sharmaine-kate-tawac-0570a02a5/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM3.56 9h3.56v11.45H3.56V9Z"/></svg>
+          </a>
+          <a class="social-icon" href="https://www.instagram.com/shrmnkt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile" title="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a class="back-top" id="backTop" href="#home" aria-label="Back to top" title="Back to top">↑</a>
+
+  <footer>
+    <div class="container footer-content">
+      <span>
+        © <span id="year"></span> Sharmaine Kate Tawac
+      </span>
+
+      <span>
+        Administrative & Business Support Specialist · Registered Civil Engineer
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const progress = document.getElementById("scrollProgress");
+    const backTop = document.getElementById("backTop");
+    const navLinks = [...document.querySelectorAll('.nav-links a')];
+    const sections = [...document.querySelectorAll('main section[id]')];
+    function updatePageEffects() {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (maxScroll > 0 ? window.scrollY / maxScroll * 100 : 0) + '%';
+      backTop.classList.toggle('visible', window.scrollY > 420);
+      let current = 'home';
+      sections.forEach(section => { if (window.scrollY >= section.offsetTop - 150) current = section.id; });
+      navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + current));
+    }
+    window.addEventListener('scroll', updatePageEffects, { passive: true });
+    window.addEventListener('resize', updatePageEffects);
+    updatePageEffects();
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      const dark = document.body.classList.contains('dark');
+      themeToggle.textContent = dark ? '☀' : '☾';
+      themeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    });
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('revealed'); revealObserver.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.panel, .skill-card, .job, .case-card, .equipment-item, .interest-card').forEach(el => {
+      el.classList.add('reveal'); revealObserver.observe(el);
+    });
+  </script>
+
+</body>
+</html>
