@@ -1,0 +1,826 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Sharmaine Kate Tawac, Administrative and Business Support Specialist and Registered Civil Engineer.">
+  <title>Sharmaine Kate Tawac | Professional Portfolio</title>
+
+  <style>
+    :root {
+      --ink: #202c2a;
+      --muted: #64716d;
+      --paper: #fbfaf7;
+      --white: #ffffff;
+      --sage: #dfe8df;
+      --sage-deep: #526d61;
+      --gold: #b68a54;
+      --line: #e4e6df;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(251, 250, 247, 0.96);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      min-height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--sage-deep);
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .hero {
+      padding: 100px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow,
+    .section-label {
+      color: var(--sage-deep);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1, h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      letter-spacing: -1px;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      margin: 20px 0;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 12px 0 18px;
+    }
+
+    .hero .tagline {
+      font-family: Georgia, serif;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p,
+    .section-intro {
+      color: var(--muted);
+    }
+
+    .hero p {
+      max-width: 650px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border: 1px solid var(--ink);
+      border-radius: 3px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: white;
+    }
+
+    .button.secondary {
+      background: transparent;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.85;
+    }
+
+    .profile-card {
+      min-height: 350px;
+      padding: 35px;
+      background: var(--sage);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid #d1ddd1;
+    }
+
+    .profile-photo {
+      display: block;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      border: 3px solid var(--white);
+      box-shadow: 0 4px 15px rgba(32, 44, 42, 0.12);
+    }
+
+    .profile-card small {
+      display: block;
+      margin-top: 20px;
+      color: var(--sage-deep);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .profile-caption {
+      max-width: 240px;
+      font-family: Georgia, serif;
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 0.4fr 1fr;
+      gap: 35px;
+      margin-bottom: 35px;
+    }
+
+    .section-label {
+      padding-top: 10px;
+    }
+
+    .about-grid,
+    .skills-grid,
+    .equipment-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .about-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .panel,
+    .skill-card,
+    .job,
+    .equipment-item {
+      padding: 25px;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .panel h3,
+    .skill-card h3,
+    .job h3 {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    .panel p,
+    .skill-card p {
+      color: var(--muted);
+    }
+
+    .soft {
+      background: #f1f0e9;
+    }
+
+    .pills,
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .pill {
+      padding: 7px 11px;
+      background: #edf1eb;
+      color: #40584d;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skill-number {
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 1.7rem;
+    }
+
+    .experience {
+      background: #f1f0e9;
+    }
+
+    .jobs {
+      display: grid;
+      gap: 20px;
+    }
+
+    .job {
+      display: grid;
+      grid-template-columns: 0.65fr 1.35fr;
+      gap: 30px;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .job-meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .job-meta strong {
+      display: block;
+      color: var(--ink);
+      font-size: 1rem;
+    }
+
+    .job ul {
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .job li {
+      margin: 7px 0;
+    }
+
+    .tool {
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      background: white;
+      font-size: 0.9rem;
+    }
+
+    .equipment-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .equipment-item span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .contact {
+      background: var(--ink);
+      color: white;
+    }
+
+    .contact .section-label {
+      color: #c8d8cb;
+    }
+
+    .contact .section-intro {
+      color: #c6cfca;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: end;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-links a {
+      color: white;
+      text-underline-offset: 4px;
+    }
+
+    footer {
+      padding: 22px 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        padding: 16px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      section,
+      .hero {
+        padding: 60px 0;
+      }
+
+      .hero-grid,
+      .section-heading,
+      .about-grid,
+      .skills-grid,
+      .job,
+      .equipment-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .profile-card {
+        min-height: 270px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="container">
+      <a class="brand" href="#home">SHARMAINE KATE TAWAC</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#tools">Tools</a>
+        <a href="#setup">Remote Setup</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">
+            Administrative • Executive • Business Support
+          </div>
+
+          <h1>Organized support.<br>Reliable coordination.</h1>
+
+          <p class="tagline">
+            Helping people, projects, and day-to-day operations run smoothly.
+          </p>
+
+          <p>
+            I'm Sharmaine Kate Tawac, a Registered Civil Engineer and
+            administrative support professional with over two years of
+            experience supporting leadership in a U.S.-based architectural firm.
+          </p>
+
+          <div class="buttons">
+            <a class="button primary" href="#experience">
+              Explore My Experience
+            </a>
+
+            <a class="button secondary" href="#contact">
+              Get in Touch
+            </a>
+
+            <!-- Make sure the PDF filename below matches your uploaded file -->
+            <a class="button secondary"
+               href="Sharmaine%20Kate%20Tawac%20-%20Portfolio.pdf"
+               target="_blank" rel="noopener">
+              View PDF Portfolio ↗
+            </a>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <div>
+            <img src="profile.jpg" alt="Sharmaine Kate Tawac"
+     class="profile-photo">
+            <small>Professional Portfolio</small>
+          </div>
+
+          <div class="profile-caption">
+            Thoughtful administration. Clear communication. Dependable execution.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">01 / About Me</div>
+
+          <div>
+            <h2>Support that brings structure to busy workdays.</h2>
+
+            <p class="section-intro">
+              My experience spans executive assistance, business operations, client communication, document management, CRM administration, invoicing, and project coordination. Working closely with leadership has taught me to stay organized, anticipate priorities, manage deadlines, and handle sensitive information with professionalism and discretion.
+            </p>
+            <p class="section-intro" style="margin-top: 14px;">
+              With my background in civil engineering and exposure to architectural and construction projects, I bring both administrative expertise and an understanding of technical project environments. I'm adaptable, detail-oriented, and always eager to learn new tools and processes that improve efficiency.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <article class="panel">
+            <h3>How I Work</h3>
+            <p>
+              I value clear communication, accurate records, discretion, and
+              dependable follow-through. I work to keep priorities visible,
+              information organized, and outstanding tasks moving forward.
+            </p>
+          </article>
+
+          <article class="panel soft">
+            <h3>What I Bring to a Team</h3>
+
+            <div class="pills">
+              <span class="pill">Executive Support</span>
+              <span class="pill">Business Operations</span>
+              <span class="pill">Client Coordination</span>
+              <span class="pill">Project Support</span>
+              <span class="pill">Document Control</span>
+              <span class="pill">Research</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="soft" id="expertise">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">02 / Expertise</div>
+
+          <div>
+            <h2>Reliable support across essential business functions.</h2>
+            <p class="section-intro">
+              A practical mix of executive assistance, administrative systems,
+              client communication, and project-related coordination.
+            </p>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-number">01</div>
+            <h3>Executive Support</h3>
+            <p>
+              Calendar coordination, email and phone communication,
+              meeting arrangements, and timely follow-ups.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">02</div>
+            <h3>Business Operations</h3>
+            <p>
+              Document preparation, proposals, invoices, payment records,
+              and organized business documentation.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">03</div>
+            <h3>Client Coordination</h3>
+            <p>
+              Professional communication with clients, vendors, and project
+              stakeholders, with attention to service and follow-through.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">04</div>
+            <h3>CRM & Records</h3>
+            <p>
+              Maintaining client and project information, data entry,
+              record organization, and accessible documentation.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">05</div>
+            <h3>Project Research</h3>
+            <p>
+              Researching property information, permit status, zoning
+              requirements, violations, and lot restrictions.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-number">06</div>
+            <h3>Project Support</h3>
+            <p>
+              Supporting project documentation and coordination in an
+              architectural environment, with exposure to site visits.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="experience" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">03 / Experience</div>
+
+          <div>
+            <h2>Experience in Practice.</h2>
+            <p class="section-intro">
+              Administrative, client-service, and project support experience
+              in remote work environments.
+            </p>
+          </div>
+        </div>
+
+        <div class="jobs">
+          <article class="job">
+            <div class="job-meta">
+              <strong>Administrative Assistant</strong>
+              BLDG Projects<br>
+              Architectural Firm · Chicago, Illinois, USA<br>
+              Remote · Dec 2023 – Aug 2026
+            </div>
+
+            <div>
+              <h3>Executive and Operational Support</h3>
+
+              <ul>
+                <li>
+                  Supported the Principal and Founder with executive,
+                  administrative, communication, and operational tasks.
+                </li>
+                <li>
+                  Managed schedules and communications to help keep daily
+                  priorities organized.
+                </li>
+                <li>
+                  Prepared business documents, presentations, reports,
+                  proposals, and invoices.
+                </li>
+                <li>
+                  Used Pipedrive and Microsoft Dynamics 365 for CRM
+                  and business record management.
+                </li>
+                <li>
+                  Assisted with site visits, site setup, interviews,
+                  onboarding, and training.
+                </li>
+                <li>
+                  Handled confidential business development information
+                  with discretion.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="job-meta">
+              <strong>Customer Service Agent</strong>
+              Patricia's Petals<br>
+              Florist · Apr 2022 – May 2023<br>
+              Remote
+            </div>
+
+            <div>
+              <h3>Customer and Order Support</h3>
+
+              <ul>
+                <li>
+                  Processed more than 25 customer orders daily while
+                  maintaining 99% accuracy.
+                </li>
+                <li>
+                  Handled inbound customer calls and supported
+                  order-related concerns.
+                </li>
+                <li>
+                  Coordinated with third-party flower shops and vendors.
+                </li>
+                <li>
+                  Maintained customer and order information in the CRM.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section id="tools">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">04 / Tools & Systems</div>
+
+          <div>
+            <h2>Tools I've Worked With.</h2>
+            <p class="section-intro">
+              Software and systems used for communication, documentation,
+              accounting support, design, and client information management.
+            </p>
+          </div>
+        </div>
+
+        <div class="tools">
+          <span class="tool">Microsoft Office Suite</span>
+          <span class="tool">Google Workspace</span>
+          <span class="tool">Pipedrive</span>
+          <span class="tool">Microsoft Dynamics 365</span>
+          <span class="tool">QuickBooks</span>
+          <span class="tool">Egnyte</span>
+          <span class="tool">RingCentral</span>
+          <span class="tool">Canva</span>
+          <span class="tool">AutoCAD</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- REMOTE WORK SETUP -->
+    <section class="soft" id="setup">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">05 / Remote Setup</div>
+
+          <div>
+            <h2>Prepared for Remote Collaboration.</h2>
+            <p class="section-intro">
+              A dedicated setup designed to support reliable remote work
+              and everyday business communication.
+            </p>
+          </div>
+        </div>
+
+        <div class="equipment-grid">
+          <div class="equipment-item">
+            <strong>Personal Computer</strong>
+            <span>
+              12th Gen Intel Core i5-12500 · 8 GB RAM ·
+              Intel UHD Graphics 770
+            </span>
+          </div>
+
+          <div class="equipment-item">
+            <strong>Internet Connection</strong>
+            <span>300+ Mbps Globe Fiber</span>
+          </div>
+
+          <div class="equipment-item">
+            <strong>Backup Device</strong>
+            <span>Tablet with wireless keyboard and mouse</span>
+          </div>
+
+          <div class="equipment-item">
+            <strong>Backup Internet</strong>
+            <span>5G mobile hotspot via smartphone</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-label">06 / Contact</div>
+
+          <h2>Thank You for Visiting.</h2>
+
+          <p class="section-intro">
+            I appreciate your interest and welcome the opportunity to connect
+            and discuss how I can support your team.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:sharmainekatetawac@gmail.com">
+            sharmainekatetawac@gmail.com
+          </a>
+
+          <a href="tel:+639090700249">
+            +63 909 070 0249
+          </a>
+
+         <a href="https://www.linkedin.com/in/sharmaine-kate-tawac-0570a02a5/"
+   target="_blank" rel="noopener noreferrer">
+  LinkedIn Profile ↗
+</a>
+
+<a href="https://www.instagram.com/shrmnkt/"
+   target="_blank" rel="noopener noreferrer">
+  Instagram Profile ↗
+</a> 
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <span>
+        © <span id="year"></span> Sharmaine Kate Tawac
+      </span>
+
+      <span>
+        Administrative & Business Support Specialist · Registered Civil Engineer
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
